@@ -9,6 +9,6 @@ I write code to solve problems from:
 
 #### How to run
 
-> Go to directory where script is saved
+> Open terminal, cd to project directory
 
 > % go run <script_name>.go
