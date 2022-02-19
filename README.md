@@ -13,6 +13,10 @@ I write code to solve problems from:
 
 > % go run <script_name>.go
 
+#### Format code
+
+> go fmt <script_name>.go
+
 #### Style guide
 
 - https://go.dev/doc/effective_go
