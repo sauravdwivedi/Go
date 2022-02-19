@@ -15,7 +15,7 @@ I write code to solve problems from:
 
 #### Format code
 
-> go fmt <script_name>.go
+> % go fmt <script_name>.go
 
 #### Style guide
 
