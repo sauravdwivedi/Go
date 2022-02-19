@@ -12,3 +12,7 @@ I write code to solve problems from:
 > Open terminal, cd to project directory
 
 > % go run <script_name>.go
+
+#### Style guide
+
+- https://go.dev/doc/effective_go
