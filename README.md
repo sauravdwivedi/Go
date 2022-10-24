@@ -7,6 +7,10 @@ A collection of coding challenge solutions written in Golang. Coding challenge d
 - https://www.hackerrank.com/
 - https://code-exercises.com/
 
+For RESTful API examples of Go, please refer to:
+
+- https://github.com/sauravdwivedi/RESTful-API/tree/main/Go
+
 ## Execution
 
 ### Clone repository  
