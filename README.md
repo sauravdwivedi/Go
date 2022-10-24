@@ -1,22 +1,31 @@
-#### A collection of Go programms I wrote for practice
+# A collection of Go programms I wrote for practice
 
-Program/problem description is given as doc comment on top of each program.
+## Project description
 
-I write code to solve problems from:
+A collection of coding challenge solutions written in Golang. Coding challenge description is given as _doc comments_ on top of each program. I write codes to solve problems from:
 
 - https://www.hackerrank.com/
 - https://code-exercises.com/
 
-#### How to run
+## Clone repository  
 
-> Open terminal, cd to project directory
+```bash
+$ gh repo clone sauravdwivedi/Go
+```
 
-> % go run <script_name>.go
+## Run code
 
-#### Format code
+```bash
+$ cd Go
+$ go run <script_name>.go
+```
 
-> % go fmt <script_name>.go
+## Format code
 
-#### Style guide
+```bash
+$ go fmt <script_name>.go
+```
+
+## Go Style guide
 
 - https://go.dev/doc/effective_go
