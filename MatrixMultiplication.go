@@ -67,7 +67,6 @@ func matMult(matA matrix, matB matrix) [][]int {
 func main() {
 	var matA = matrix{name: "A"}
 	matA.setMatrix()
-	fmt.Println(matA.rows)
 	fmt.Println(fmt.Sprintf("Matrix %s: ", matA.name))
 	for i := 0; i < matA.rows; i++ {
 		for j := 0; j < matA.cols; j++ {
