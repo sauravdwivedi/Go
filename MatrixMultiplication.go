@@ -7,6 +7,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -19,33 +20,44 @@ type matrix struct {
 	matrix [][]int
 }
 
-func (m *matrix) setMatrix() {
+func (m *matrix) setMatrix() *matrix {
 	fmt.Println(fmt.Sprintf("Matrix %s rows: ", m.name))
 	var rows int
-	fmt.Scan(&rows)
+	_, errOne := fmt.Scan(&rows)
+	if errOne != nil {
+		log.Print("Can only accept integers. Please try again!")
+		return m.setMatrix()
+	}
 	fmt.Println(fmt.Sprintf("Matrix %s cols: ", m.name))
 	var cols int
-	fmt.Scan(&cols)
+	_, errTwo := fmt.Scan(&cols)
+	if errTwo != nil {
+		log.Print("Can only accept integers. Please try again!")
+		return m.setMatrix()
+	}
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println(fmt.Sprintf("Space separated Matrix %s entries (e.g. '1 2 3'): ", m.name))
 	scanner.Scan()
+	var errThree error
 	var matRaw []string = strings.Split(strings.TrimSpace(scanner.Text()), " ")
 	var mat [][]int
 	for i := 0; i < rows; i++ {
 		var rowTemp []int
 		for j := 0; j < cols; j++ {
-			element, err := strconv.ParseInt(matRaw[i*cols+j], 10, 64)
-			if err == nil {
-				rowTemp = append(rowTemp, int(element))
-			} else {
-				panic(err)
+			var element int64
+			element, errThree = strconv.ParseInt(matRaw[i*cols+j], 10, 64)
+			if errThree != nil {
+				log.Print("Can only accept integers. Please try again!")
+				return m.setMatrix()
 			}
+			rowTemp = append(rowTemp, int(element))
 		}
 		mat = append(mat, rowTemp)
 	}
 	m.rows = rows
 	m.cols = cols
 	m.matrix = mat
+	return m
 }
 
 func matMult(matA matrix, matB matrix) [][]int {
