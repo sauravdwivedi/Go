@@ -1,4 +1,5 @@
-/**Write a method to read two integer matrices from StdIn and print
+/**
+ * Write a method to read two integer matrices from StdIn and print
  * their product matrix.
  */
 
@@ -61,6 +62,20 @@ func (m *matrix) setMatrix() *matrix {
 }
 
 func matMult(matA matrix, matB matrix) [][]int {
+	/**
+	 * Function multiplies two matrices given col_A == rows_B.
+	 *
+	 * Args:
+	 *     matA (matrix): Matrix A.
+	 *     matB (matrix): Matrix B.
+	 *
+	 * Raises:
+	 *     None.
+	 *
+	 * Returns:
+	 *     prodMat (matrix): Product of Matrix A and Matrix B.
+	 */
+
 	var prodMat [][]int
 	for i := 0; i < matA.rows; i++ {
 		var rowTemp []int
