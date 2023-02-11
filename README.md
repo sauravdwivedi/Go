@@ -9,7 +9,7 @@ A collection of coding challenge solutions written in Golang. Coding challenge d
 
 For RESTful API examples of Go, please refer to:
 
-- https://github.com/sauravdwivedi/RESTful-API/tree/main/Go
+- https://github.com/sauravdwivedi/Microservices/tree/main/Go
 
 ## Execution
 
